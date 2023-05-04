@@ -1,0 +1,304 @@
+/* Header :-*/
+.main{
+    width: '100%';
+    height: 60px;
+    margin-bottom: 5px;
+    background-color: rgb(160, 128, 156);
+    display:flex;
+    border-bottom-left-radius: 10px ;
+    border-bottom-right-radius: 10px ;
+}
+
+.main h4{
+    padding: 15px;
+    padding-right: 5px;
+    color: white;
+}
+
+.main img{
+  padding: 3px;
+  padding-left: 10px;    
+}
+.Dropdown{
+    background-color:white;
+    margin: 12px;
+}
+
+/* Footer :-*/
+
+.Footmain{
+    width: 100%;
+    height: 60px;
+    background-color: rgb(160, 128, 156);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.Footmain h4{
+    text-align: center;
+    padding: 12px;
+}
+
+/* Home Page:- */
+
+.Container1{
+    background-color:rgb(200, 238, 200) ;
+}
+.con1slider{
+    width:70%;
+    height:600px;
+    margin-Left:200px
+}
+.con1col{
+    padding: 20px;
+}
+
+
+.con1col img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50px;
+    margin: 10px;
+    margin-left: 100px;
+   
+}
+
+.con1col h4{
+    color: black;
+    text-align: center;
+}
+.con1col h6{
+    color: black;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Details page */
+
+.Detailcon1{
+    background-color:rgb(200, 238, 200) ;
+
+}
+.DelailSlider{
+    width:70%;
+    height:600px;
+    margin-Left:200px
+}
+.DetailItem{
+    display: flex;
+    margin: 20px;
+    background-color:rgb(160, 128, 156);
+    padding: 20px;
+    border-radius: 30px;
+}
+.DetailItem img{
+    width: 500px;
+    height: 550px;
+    margin: 10px;
+    border-radius: 30px;
+}
+.DetailText{
+    color: black;
+}
+.DetailText h1{
+    text-align: center;
+    margin: 10px;
+}
+.DetailText h2{
+    padding: 40px;
+}
+.DetailText Button{
+    background-color:rgb(200, 238, 200);
+    color: black;
+    border-width: 0px;
+    width: 150px;
+    height: 50px;
+    border-radius: 15px;
+    margin-left: 280px;
+    margin-top: 10px;
+}
+.delprice{
+    color:rgb(72, 72, 72)
+    }
+    .discountprice{
+    color: red;
+    }
+
+/* Register page */
+
+.RegisterCon1{
+    background-color:rgb(200, 238, 200);
+    height: 825px;
+}
+.RegisterForm{
+    width: 70%;
+    height: 600px;
+    background-color: rgb(160, 128, 156);
+    position: relative;
+    left: 200px;
+    top: 50px;
+    margin-bottom: 100px;
+    border-radius: 50px;
+}
+.RegisterForm h1{
+    text-align: center;
+    margin: 10px;
+    position: relative;
+    top: 20px;
+}
+.RegisterForm input{
+    width:70%;
+    height:55px;
+    margin-left: 15%;
+    margin-top: 3%;
+    padding: 20px;
+    font-size: 30px;
+    border-width: 0px;
+    border-bottom-width:3px ;
+    border-color: rgb(0, 0, 0);
+    background-color:rgb(160, 128, 156);
+}
+.RegisterForm Button{
+    width: 200px;
+    padding: 3px;
+    font-size: 25px;
+    background-color: rgb(200, 238, 200);
+    border-radius: 15px;
+    margin-top: 30px;
+    margin-left: 39%;
+    border-width: 0px;
+    color: black;
+}
+
+/* Login Page */
+
+.LoginCon1{
+    background-color:rgb(200, 238, 200);
+    height: 825px;
+}
+.LoginItem{
+    width: 70%;
+    height: 600px;
+    background-color: rgb(160, 128, 156);
+    position: relative;
+    left: 200px;
+    top: 50px;
+    margin-bottom: 100px;
+    border-radius: 50px;
+}
+.LoginItem h1{
+    text-align: center;
+    margin: 10px;
+    position: relative;
+    top: 20px;
+}
+.LoginItem div{
+    width: 70%;
+    height: 450px; ;
+    background-color: rgb(200, 238, 200);
+    margin-top: 40px;
+    margin-left: 15%;
+    border-radius: 30px;
+}
+.LoginCon1 input{
+    width:70%;
+    height:55px;
+    margin-left: 15%;
+    margin-top: 5%;
+    padding: 20px;
+    font-size: 30px;
+    border-width: 0px;
+    border-bottom-width:3px ;
+    border-color: rgb(0, 0, 0);
+    background-color:rgb(200, 238, 200);
+}
+.LoginItem Button{
+    width: 200px;
+    padding: 3px;
+    font-size: 25px;
+    background-color: rgb(160, 128, 156);
+    border-radius: 15px;
+    margin-top: 40px;
+    margin-left: 34%;
+    border-width: 0px;
+    color: black;
+}
+
+/* About Page */
+
+.AboutCon1{
+    background-color:rgb(200, 238, 200);
+    height: 825px;
+}
+
+.AboutDetail{
+    width: 70%;
+    height: 600px;
+    background-color: rgb(160, 128, 156);
+    position: relative;
+    left: 200px;
+    top: 50px;
+    margin-bottom: 100px;
+    border-radius: 50px;
+}
+
+.AboutCon1 h1{
+    text-align: center;
+    margin: 10px;
+    position: relative;
+    top: 20px;
+}
+
+.AboutCon1 h4{
+    padding: 10px;
+}
+
+/* Order Detail */
+
+.OrderCon1{
+    background-color:rgb(200, 238, 200);
+    height: 825px;
+}
+
+.OrderDetail{
+    width: 70%;
+    height: 600px;
+    background-color: rgb(160, 128, 156);
+    position: relative;
+    left: 200px;
+    top: 50px;
+    margin-bottom: 100px;
+    border-radius: 50px;
+}
+.OrderDetail h1{
+    text-align: center;
+    margin: 10px;
+    position: relative;
+    top: 20px;
+}
+.OrderDetail input{
+    width:70%;
+    height:55px;
+    margin-left: 15%;
+    margin-top: 3%;
+    padding: 20px;
+    font-size: 30px;
+    border-width: 0px;
+    border-bottom-width:3px ;
+    border-color: rgb(0, 0, 0);
+    background-color:rgb(200, 238, 200);
+}
+.OrderDetail Button{
+    width: 200px;
+    padding: 3px;
+    font-size: 25px;
+    background-color: rgb(200, 238, 200);
+    border-radius: 15px;
+    margin-top: 40px;
+    margin-left: 38%;
+    border-width: 0px;
+    color: black;
+}
+.cur{
+    cursor: pointer;
+}
