@@ -11,7 +11,7 @@ export default function Home(){
     navigate('/Details',{state:d})
   }
     return(
-        <Container className="Container1">
+        <Container /* fluid */ className="Container1 " >
           <Header/>
         <div className="con1slider">
           <Carousel>
