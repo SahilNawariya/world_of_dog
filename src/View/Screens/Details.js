@@ -31,9 +31,13 @@ export default function Details(){
           }
         }
     return(
-        <Container className='Detailcon1'>
+        <Container className='Detailcon1 bg-primary'>
           <Header/>
-              <Carousel className='DelailSlider justify-content-center'>
+          <Row>
+            <Col className='text-align-center justify-content-center' style={{margin:'auto'}}>
+              <div className=' DelailSlider ' style={{margin:'auto'}}>
+               
+              <Carousel >
               {sliders.map(function(d){
                   console.log(d);
                   return(
@@ -55,6 +59,9 @@ export default function Details(){
               )
             }
           </Carousel>
+          </div>
+          </Col>
+          </Row>
             <Row className='DetailItem'>
               <Col lg={6}>
                 <img src={d.Image}/>
