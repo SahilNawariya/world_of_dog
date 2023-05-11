@@ -1,4 +1,4 @@
-import {Container, Dropdown, Nav,Button} from 'react-bootstrap';
+import {Container, Dropdown, Nav,Button, Row,Col, Navbar} from 'react-bootstrap';
 import { useNavigate } from "react-router-dom";
 import Home from '../Screens/Home';
 import '../style/style.css'
@@ -21,7 +21,8 @@ export default function Header(){
   alert('Log Out');
  }
     return(
-        <Container className='main cur'>
+      <Navbar>
+        <Container className='main cur fluid'>
             <img src={require('../Images/dog.png')} onClick={()=>{navigation('/Home')}}/>
             <h4 onClick={()=>{navigation('/Home')}}>Home</h4>
             <h4 onClick={()=>{navigation('/About')}}>About</h4>
@@ -32,7 +33,7 @@ export default function Header(){
    
   }
             <Dropdown>
-      <Dropdown.Toggle variant="danger" id="dropdown-basic" className='Dropdown'>
+      <Dropdown.Toggle variant="danger" id="dropdown-basic" className='Dropdown '>
         Menu
       </Dropdown.Toggle>
 
@@ -43,6 +44,7 @@ export default function Header(){
       </Dropdown.Menu>
     </Dropdown>
         </Container>
+        </Navbar>
     )
 }
 

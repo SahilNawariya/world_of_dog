@@ -8,15 +8,15 @@
     border-bottom-left-radius: 10px ;
     border-bottom-right-radius: 10px ;
 }
-
 .main h4{
     padding: 15px;
     padding-right: 5px;
     color: white;
 }
 .main img{
-  padding: 3px;
-  padding-left: px;    
+   width: 50px;
+   height:50px;
+   margin: 5px;
 }
 .Dropdown{
     background-color:white;
@@ -43,11 +43,15 @@
 
 .Container1{
     background-color:rgb(200, 238, 200) ;
+    
+}
+.Sliderbox{
+    width: 100%;
+    justify-content: center;  
 }
 .con1slider{
     width:70%;
-    height:600px;
-    margin-Left:200px
+    max-height: 600px;
 }
 .con1col{
     padding: 20px;
@@ -59,8 +63,8 @@
     height: 200px;
     border-radius: 50px;
     margin: 10px;
-    margin-left: 100px;
-   
+    margin:auto;
+   background-color:black;
 }
 
 .con1col h4{
@@ -82,7 +86,6 @@
 }
 .DelailSlider{
     width:70%;
-    height:600px;
     /* margin-Left:200px */
 }
 .DetailItem{

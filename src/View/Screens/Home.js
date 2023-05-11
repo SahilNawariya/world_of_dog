@@ -13,7 +13,9 @@ export default function Home(){
     return(
         <Container /* fluid */ className="Container1 " >
           <Header/>
-        <div className="con1slider">
+          
+        <Row className="Sliderbox">
+        <Col lg={7} className="con1slider">
           <Carousel>
               {sliders.map(function(d){
                   console.log(d);
@@ -23,11 +25,11 @@ export default function Home(){
                       className="d-block w-100"
                       src={d}
                       alt="First slide"
-                      style={{width:'70%',height:600,borderRadius:30}}
+                      style={{width:'70%',maxHeight:600,borderRadius:30}}
                     />
                     <Carousel.Caption>
                       <h3>First slide label</h3>
-                      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                      {/* <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> */}
                     </Carousel.Caption>
               </Carousel.Item>
       
@@ -36,15 +38,17 @@ export default function Home(){
               )
             }
           </Carousel>
-      </div>
+          </Col>
+      </Row>
+     
       <Row className="con1Row" >
         
            {
                 productdata.map(function(d){
                     console.log(d);
                     return(
-                      <Col lg={4} className="con1col cur" onClick={()=>{productinfo(d)}} >
-                             <img src={d.Image}/> 
+                      <Col lg={4} md={6} className="con1col cur" style={{justifyContent:'center',textAlign:'center'}} onClick={()=>{productinfo(d)}} >
+                             <img src={d.Image} className="" style={{margin:'auto'}}/> 
                             <h4>{d.name}</h4>
                             <h6>{d.description}</h6>
                         
