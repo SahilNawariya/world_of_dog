@@ -1,26 +1,15 @@
 /* Header :-*/
 .main{
-    width: '100%';
-    height: 60px;
-    margin-bottom: 5px;
+    min-height: 60px;
+    margin-bottom: 10px;
     background-color: rgb(160, 128, 156);
-    display:flex;
     border-bottom-left-radius: 10px ;
     border-bottom-right-radius: 10px ;
 }
-.main h4{
-    padding: 15px;
-    padding-right: 5px;
-    color: white;
-}
-.main img{
-   width: 50px;
-   height:50px;
-   margin: 5px;
-}
-.Dropdown{
-    background-color:white;
-    margin: 12px;
+.text{
+    font-weight: 700;
+    font-size: 20px;
+    color: black;
 }
 
 /* Footer :-*/
@@ -28,14 +17,18 @@
 .Footmain{
     width: 100%;
     height: 60px;
+    display: flex;
     background-color: rgb(160, 128, 156);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     margin-top: 10px;
+    align-items: center;
+    justify-content: center;
 }
 
-.Footmain h4{
-    text-align: center;
+.Footmain img{
+    width: 60px;
+    height: 60px;
     padding: 12px;
 }
 
@@ -47,11 +40,12 @@
 }
 .Sliderbox{
     width: 100%;
-    justify-content: center;  
+    justify-content: center;
 }
 .con1slider{
     width:70%;
     max-height: 600px;
+    margin-left: 20px;
 }
 .con1col{
     padding: 20px;
@@ -82,19 +76,25 @@
 .Detailcon1{
     background-color:rgb(200, 238, 200) ;
     justify-content: center;
-
 }
 .DelailSlider{
     width:70%;
-    /* margin-Left:200px */
+    margin: 20px;
+    margin: auto;
 }
 .DetailItem{
     background-color:rgb(160, 128, 156);
+    
+    position: relative;
+    top: 5px;
+    bottom: 10px;
+    margin: 10px;
     border-radius: 30px;
+    align-items: center;
+    text-align: center;
 }
 .DetailItem img{
-    width: 500px;
-    height: 550px;
+    width: 70%;
     margin: 10px;
     border-radius: 30px;
 }
@@ -106,7 +106,8 @@
     margin: 10px;
 }
 .DetailText h2{
-    padding: 40px;
+    padding: 5px;
+    padding-top: 0px;
 }
 .DetailText Button{
     background-color:rgb(200, 238, 200);
@@ -116,29 +117,30 @@
     height: 50px;
     border-radius: 15px;
     align-items: center;
-    margin-top: 0px;
+    margin: 10px;
 }
 .delprice{
     color:rgb(72, 72, 72)
     }
     .discountprice{
-    color: red;
+    color:rgb(72, 72, 72);
+    margin-left: 0px;
     }
 
 /* Register page */
 
 .RegisterCon1{
     background-color:rgb(200, 238, 200);
-    height: 825px;
+    min-height: 825px;
 }
 .RegisterForm{
     width: 70%;
-    height: 600px;
+    min-height: 600px;
     background-color: rgb(160, 128, 156);
     position: relative;
-    left: 200px;
-    top: 50px;
-    margin-bottom: 100px;
+    margin-top: 45px;
+    left: 15%;
+    margin-bottom:45px;
     border-radius: 50px;
 }
 .RegisterForm h1{
@@ -150,13 +152,12 @@
 .RegisterForm input{
     width:70%;
     height:55px;
-    margin-left: 15%;
     margin-top: 3%;
+    margin-left: 15%;
     padding: 20px;
     font-size: 30px;
     border-width: 0px;
     border-bottom-width:3px ;
-    border-color: rgb(0, 0, 0);
     background-color:rgb(160, 128, 156);
 }
 .RegisterForm Button{
@@ -166,7 +167,7 @@
     background-color: rgb(200, 238, 200);
     border-radius: 15px;
     margin-top: 30px;
-    margin-left: 39%;
+   /*  margin-left: 39%; */
     border-width: 0px;
     color: black;
 }
@@ -175,17 +176,14 @@
 
 .LoginCon1{
     background-color: rgb(200, 238, 200);
-    height: 825px;
 }
 .LoginItem{
-    width: 70%;
-    height: 600px;
     background-color: rgb(160, 128, 156);
-    position: relative;
-    left: 200px;
-    top: 50px;
-    margin-bottom: 100px;
+    margin-bottom: 40px;
+    margin-top: 50px;
     border-radius: 50px;
+    justify-content: center;
+    align-items: center;
 }
 .LoginItem h1{
     text-align: center;
@@ -196,20 +194,18 @@
 .LoginItem div{
     width: 70%;
     height: 450px; ;
-    margin-top: 40px;
+    margin-top: 100px;
     margin-left: 15%;
-    border-radius: 30px;
 }
 .LoginCon1 input{
     width:70%;
     height:55px;
-    margin-left: 15%;
     margin-top: 5%;
+    margin-left: 15%;
     padding: 20px;
     font-size: 30px;
     border-width: 0px;
     border-bottom-width:3px ;
-    placeholders-color:black;
     background-color:rgb(160, 128, 156);
 }
 .LoginItem Button{
@@ -218,8 +214,9 @@
     font-size: 25px;
     background-color: rgb(200, 238, 200);
     border-radius: 15px;
-    margin-top: 40px;
-    margin-left: 34%;
+    position: relative;
+    top: 40px;
+  /*   left:35%; */
     border-width: 0px;
     color: black;
 }
@@ -228,17 +225,17 @@
 
 .AboutCon1{
     background-color:rgb(200, 238, 200);
-    height: 825px;
+    /* min-height: 825px; */
 }
 
 .AboutDetail{
     width: 70%;
-    height: 600px;
+    min-height: 600px;
     background-color: rgb(160, 128, 156);
     position: relative;
-    left: 200px;
+    left: 15%;
     top: 50px;
-    margin-bottom: 100px;
+    margin-bottom: 82px;
     border-radius: 50px;
 }
 

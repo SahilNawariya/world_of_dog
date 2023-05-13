@@ -8,6 +8,7 @@ export default function OrderDetail(){
     const [Pincood,setPincood]=useState('');
     const [Area,setArea]=useState('');
     const [Landmark,setLandmark]=useState('');
+    
 
     function OrderBook(){
         console.log(Name);
@@ -18,7 +19,8 @@ export default function OrderDetail(){
         alert("Order Successfully")
 }
     return(
-       <Container className="OrderCon1">
+       <Container fluid className="OrderCon1">
+        <Container>
         <Header/>
         <div className="OrderDetail cur">
             <h1>Order Book Screen</h1>
@@ -26,10 +28,11 @@ export default function OrderDetail(){
             <input name="name" placeholder="Address" value={Address} onChange={(d)=>setAddress(d.target.value)} />
             <input name="name" placeholder="Pincood" value={Pincood} onChange={(d)=>setPincood(d.target.value)} />
             <input name="name" placeholder="Area Name"  value={Area} onChange={(d)=>setArea(d.target.value)} />
-            <input name="name" placeholder="Landmark"  value={Landmark} onChange={(d)=>setLandmark(d.target.value)}/>
+            <input name="name" placeholder="Landmark"  value={Landmark} onChange={(d)=>setLandmark(d.target.value)}/> 
             <Button onClick={OrderBook}>Order Now</Button>
         </div>
         <Footer/>
+        </Container>
        </Container>
     )
 }

@@ -37,7 +37,8 @@ let params = {
         setName('')
 }
     return(
-       <Container className="RegisterCon1">
+       <Container fluid className="RegisterCon1">
+        <Container>
         <Header/>
         <div className="RegisterForm cur">
             <h1>Reqister Form</h1>
@@ -49,6 +50,7 @@ let params = {
             <Button onClick={register}>Submit</Button>
         </div>
         <Footer/>
+        </Container>
        </Container>
     )
 }

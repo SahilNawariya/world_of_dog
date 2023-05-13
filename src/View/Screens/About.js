@@ -3,7 +3,8 @@ import Header from "../Component/Header";
 import Footer from "../Component/Footer";
 export default function About(){
     return(
-       <Container className="AboutCon1">
+       <Container fluid className="AboutCon1">
+        <Container>
         <Header/>
         <div className="AboutDetail">
             <h1>About</h1>
@@ -13,6 +14,7 @@ export default function About(){
             </h4>
         </div>
         <Footer/>
+        </Container>
        </Container>
     )
 }

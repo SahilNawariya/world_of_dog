@@ -1,4 +1,4 @@
-import {Container, Dropdown, Nav,Button, Row,Col, Navbar} from 'react-bootstrap';
+import {Container, Form,Navbar, Nav,Button, NavDropdown} from 'react-bootstrap';
 import { useNavigate } from "react-router-dom";
 import Home from '../Screens/Home';
 import '../style/style.css'
@@ -21,8 +21,51 @@ export default function Header(){
   alert('Log Out');
  }
     return(
-      <Navbar>
-        <Container className='main cur fluid'>
+      <Navbar className='main cur' expand="lg">
+      <Container fluid >
+        <Navbar.Brand className='text' onClick={()=>{navigation('/Home')}}><img src={require('../Images/dog.png')} style={{maxWidth:50,maxHeight:50}}/>World Of Dog</Navbar.Brand>
+        <Navbar.Toggle aria-controls="navbarScroll" />
+        <Navbar.Collapse id="navbarScroll">
+          <Nav
+            className="me-auto my-2 my-lg-0 text"
+            navbarScroll
+          >
+            <Nav.Link onClick={()=>{navigation('/Home')}}>Home</Nav.Link>
+            <Nav.Link onClick={()=>{navigation('/About')}}>About</Nav.Link>
+            {          !user?<>
+            <Nav.Link onClick={()=>{navigation('/Register')}}>
+              Register
+            </Nav.Link>
+            <Nav.Link onClick={()=>{navigation('/Login')}}>
+            Login
+            </Nav.Link>
+            </>:
+            <Nav.Link onClick={logout}>
+            Logout
+            </Nav.Link>
+    }
+            <NavDropdown className='text' title="Menu" id="navbarScrollingDropdown">
+              <NavDropdown.Item  onClick={()=>{navigation('/Home')}}>My Cart</NavDropdown.Item>
+              
+            </NavDropdown>
+          </Nav>
+       
+          <Form className="d-flex">
+            <Form.Control style={{backgroundColor:'rgb(200, 238, 200)'}}
+              type="search"
+              placeholder="Search"
+              className="me-2"
+              aria-label="Search"
+            />
+            <Button style={{backgroundColor:'rgb(200, 238, 200)'}} variant="outline-success">Search</Button>
+          </Form>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar> 
+    )
+}
+
+{/* <Container fluid className='main cur'>
             <img src={require('../Images/dog.png')} onClick={()=>{navigation('/Home')}}/>
             <h4 onClick={()=>{navigation('/Home')}}>Home</h4>
             <h4 onClick={()=>{navigation('/About')}}>About</h4>
@@ -39,13 +82,7 @@ export default function Header(){
 
       <Dropdown.Menu>
         <Dropdown.Item href="#/All Breeds-1" onClick={()=>{navigation('/Home')}}>All Breeds</Dropdown.Item>
-        {/* <Dropdown.Item href="#/Weight Vise-2" onClick={()=>{navigation('/Login')}}>Weight Vise</Dropdown.Item>
-        <Dropdown.Item href="#/Size vice-3" onClick={()=>{navigation('/About')}}>Size vice</Dropdown.Item> */}
+      
       </Dropdown.Menu>
     </Dropdown>
-        </Container>
-        </Navbar>
-    )
-}
-
-
+        </Container> */}

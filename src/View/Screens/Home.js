@@ -11,7 +11,8 @@ export default function Home(){
     navigate('/Details',{state:d})
   }
     return(
-        <Container /* fluid */ className="Container1 " >
+        <Container fluid className="Container1 " >
+          <Container>
           <Header/>
           
         <Row className="Sliderbox">
@@ -25,10 +26,10 @@ export default function Home(){
                       className="d-block w-100"
                       src={d}
                       alt="First slide"
-                      style={{width:'70%',maxHeight:600,borderRadius:30}}
+                      style={{width:'100%',minHeight:250,maxHeight:600,borderRadius:30}}
                     />
                     <Carousel.Caption>
-                      <h3>First slide label</h3>
+                      {/* <h3>First slide label</h3> */}
                       {/* <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> */}
                     </Carousel.Caption>
               </Carousel.Item>
@@ -59,6 +60,7 @@ export default function Home(){
         
       </Row>
       <Footer/>
+      </Container>
         </Container>
     )
 }

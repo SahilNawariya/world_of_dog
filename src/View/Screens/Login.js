@@ -1,4 +1,4 @@
-import { Container,Button } from "react-bootstrap";
+import { Container,Button, Row, Col } from "react-bootstrap";
 import Header from "../Component/Header";
 import Footer from "../Component/Footer";
 import axios from "axios";
@@ -41,17 +41,20 @@ let params = {
         setName('')
             }
     return(
-       <Container className="LoginCon1">
+       <Container fluid className="LoginCon1">
+        <Container>
         <Header/>
-        <div className="LoginItem cur">
+        <Container className="LoginItem cur">
             <h1>Login User</h1>
+            
             <div>
              <input name="name" placeholder="Enter email" value={Email} onChange={(d)=>setEmail(d.target.value)} />
             <input name="name" placeholder="Password" value={Password} onChange={(d)=>setPassword(d.target.value)} />
-            <Button onClick={Login}>Login</Button>
-            </div>
-        </div>
+                <Button onClick={Login}>Login</Button>
+                </div>
+        </Container>
         <Footer/>
+        </Container>
        </Container>
     )
 }
