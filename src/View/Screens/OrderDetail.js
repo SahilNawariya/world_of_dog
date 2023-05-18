@@ -1,22 +1,42 @@
 import { Button, Container, Form } from "react-bootstrap";
+import axios from "axios";
 import Header from "../Component/Header";
 import Footer from "../Component/Footer";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 export default function OrderDetail(){
+
     const [Name,setName]=useState('');
     const [Address,setAddress]=useState('');
     const [Pincood,setPincood]=useState('');
     const [Area,setArea]=useState('');
     const [Landmark,setLandmark]=useState('');
-    
+    const[user,setUser] = useState(localStorage.getItem('user'))
 
-    function OrderBook(){
-        console.log(Name);
-        console.log(Address);
-        console.log(Pincood);
-        console.log(Area);
-        console.log(Landmark);
-        alert("Order Successfully")
+async function OrderBook(){
+    if(user){
+    let params={
+        name:Name,
+        address:Address,
+        pincood:Pincood,
+        area:Area,
+        landmark:Landmark
+    }
+    let res = await axios.post('Order',params).catch(err=>console.log("error"))
+    const {message,success} =res.data;
+    if(success){
+        alert(message)
+    }
+    else{
+        alert(message)
+    }
+    setName('')
+    setAddress('')
+    setPincood('')
+    setArea('')
+    setLandmark('')
+    }else(
+        alert('Please Login')
+    )
 }
     return(
        <Container fluid className="OrderCon1">

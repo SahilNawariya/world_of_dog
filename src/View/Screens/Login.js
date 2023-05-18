@@ -14,10 +14,7 @@ export default function Login(){
    async function Login(){
         console.log(Name);
         console.log(Email);
-        console.log(Password);
-        alert("Login")
-
-              
+        console.log(Password);              
 let params = {
     email:Email,
     password:Password
@@ -46,12 +43,11 @@ let params = {
         <Header/>
         <Container className="LoginItem cur">
             <h1>Login User</h1>
-            
-            <div>
+            <div className="InputBox">
              <input name="name" placeholder="Enter email" value={Email} onChange={(d)=>setEmail(d.target.value)} />
             <input name="name" placeholder="Password" value={Password} onChange={(d)=>setPassword(d.target.value)} />
-                <Button onClick={Login}>Login</Button>
-                </div>
+            </div>
+            <Button onClick={Login}>Login</Button>
         </Container>
         <Footer/>
         </Container>

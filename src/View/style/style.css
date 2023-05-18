@@ -167,7 +167,7 @@
     background-color: rgb(200, 238, 200);
     border-radius: 15px;
     margin-top: 30px;
-   /*  margin-left: 39%; */
+    margin-left: 39%;
     border-width: 0px;
     color: black;
 }
@@ -178,9 +178,11 @@
     background-color: rgb(200, 238, 200);
 }
 .LoginItem{
+    width: 70%;
+    min-height: 660px;
     background-color: rgb(160, 128, 156);
-    margin-bottom: 40px;
-    margin-top: 50px;
+    margin-bottom: 71px;
+    margin-top: 71px;
     border-radius: 50px;
     justify-content: center;
     align-items: center;
@@ -189,19 +191,16 @@
     text-align: center;
     margin: 10px;
     position: relative;
-    top: 20px;
+    top: 100px;
 }
-.LoginItem div{
-    width: 70%;
-    height: 450px; ;
-    margin-top: 100px;
-    margin-left: 15%;
+.InputBox{
+    margin-top: 150px   ;
 }
-.LoginCon1 input{
+.InputBox input{
     width:70%;
     height:55px;
-    margin-top: 5%;
     margin-left: 15%;
+    margin-top: 3%;
     padding: 20px;
     font-size: 30px;
     border-width: 0px;
@@ -215,8 +214,8 @@
     background-color: rgb(200, 238, 200);
     border-radius: 15px;
     position: relative;
-    top: 40px;
-  /*   left:35%; */
+    top: 70px;
+    left:43%;
     border-width: 0px;
     color: black;
 }
@@ -262,7 +261,7 @@
     height: 600px;
     background-color: rgb(160, 128, 156);
     position: relative;
-    left: 200px;
+    left:15%;
     top: 50px;
     margin-bottom: 100px;
     border-radius: 50px;
@@ -298,4 +297,36 @@
 }
 .cur{
     cursor: pointer;
+}
+
+/* MyOrder Screen */
+
+.MyOrderCon1{
+    background-color:rgb(200, 238, 200);
+    min-height: 828px; 
+}
+
+.MyOrderMain{
+    min-height:672px;
+}
+.MyOrder{
+    width: 100%;
+    height: 60px;
+    text-align: center;
+}
+.MyOrderBox{
+    width: 70%;
+    background-color: rgb(160, 128, 156);
+    margin: 10px;
+    text-align: center;
+    margin-left: 15%;
+    border-radius: 50px;
+}
+.MyOrderBox img{
+    width:250px;
+    height:250px;
+    position: relative;
+    margin: auto;
+    margin: 20px;
+    border-radius: 50px;
 }

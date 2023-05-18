@@ -22,7 +22,7 @@ export default function Header(){
  }
     return(
       <Navbar className='main cur' expand="lg">
-      <Container fluid >
+      <Container fluid>
         <Navbar.Brand className='text' onClick={()=>{navigation('/Home')}}><img src={require('../Images/dog.png')} style={{maxWidth:50,maxHeight:50}}/>World Of Dog</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">

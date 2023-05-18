@@ -29,6 +29,23 @@ app.post('/addtocart',function(req,res){
     }
     res.send(resultdata)
  })
+ app.post('/Order',function(req,res){
+    let result=fs.appendFileSync('./data/UserDetail.json', JSON.stringify(req.body),"utf8")
+    fs.appendFileSync('./data/UserDetail.json', "\n","utf8")
+    let resultdata=""
+    if(!result){
+        resultdata={success:true,message:"Your Address Seved Successfully Added"}
+    }
+    else{
+        resultdata={success:false,message:"Your Address Not Added Successfully"}
+        
+    }
+    res.send(resultdata)
+ })
+ app.post('/MyOrder',function(req,res){
+    let result=fs.appendFileSync('./data/Useritems.json', JSON.stringify(req.body),"utf8")
+    fs.appendFileSync('./data/Useritems.json', "\n","utf8")
+ })
 
  
  app.post('/login',function(req,res){
@@ -54,8 +71,24 @@ app.post('/addtocart',function(req,res){
     res.send(resultlog)
  })
 
+/*  app.post('/MyOrder',function(req,res){
+    let data=fs.readFileSync('./data/Useritems.json',"utf8")
+    let adddata=[]
+    data.split('\n').forEach(d=>{
+        adddata.push(d)
+    })
+    let add1=[]
+    adddata.map(d=>{
+        if(d!=="")
+        add1.push(JSON.parse(d))
+    })
+    console.log(add1);
+    
+    res.send(add1)
+ })
+ */
  app.get('/showtocart',function(req,res){
-    let data=fs.readFileSync('./data/addtocart.json',"utf8")
+    let data=fs.readFileSync('./data/Useritems.json',"utf8")
     let adddata=[]
     data.split('\n').forEach(d=>{
         adddata.push(d)

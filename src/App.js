@@ -11,6 +11,7 @@ import './View/style/style.css'
 import Login from './View/Screens/Login';
 import About from './View/Screens/About';
 import OrderDetail from './View/Screens/OrderDetail';
+import MyOrder from './View/Screens/MyOrder';
 function App() {
   return (
     <BrowserRouter>
@@ -24,6 +25,7 @@ function App() {
         <Route path='/Login' element={<Login/>}/>
         <Route path='/About' element={<About/>}/>
         <Route path='/OrderDetail' element={<OrderDetail/>}/>
+        <Route path='/MyOrder' element={<MyOrder/>}/>
       </Routes>
     </BrowserRouter>
   );

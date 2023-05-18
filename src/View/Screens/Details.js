@@ -13,13 +13,14 @@ export default function Details(){
     const[d,setd]=useState(loc.state)
     async function AddToCart(){
       if(!user){
-        alert('Please Login')
+        alert('Please Login');
+        navigation('/Login')
       }else{
-    let params = {
-     name:d.name,
-     rate:d.rate_sell,
-     mrprate:d.mrprate,
-     image:d.Image
+      let params = {
+      name:d.name,
+      rate:d.rate_sell,
+      mrprate:d.mrprate,
+      image:d.Image
       }
           let res = await axios.post('addtocart',params)
           console.log(res.data);
@@ -35,6 +36,30 @@ export default function Details(){
           }
         }
         }
+        async function ByyNow(){
+          if(!user){
+            alert('Please Login');
+            navigation('/Login')
+          }else{
+          let params = {
+          name:d.name,
+          rate:d.rate_sell,
+          mrprate:d.mrprate,
+          image:d.Image
+          }
+              let res = await axios.post('MyOrder',params)
+              console.log(res.data);
+              const {message,success} =res.data
+              if(success){
+                  localStorage.setItem("user",true)
+                  navigation("/OrderDetail")
+                  window.location.reload();
+              }
+              else{
+                  alert(message)
+              }
+            }
+            }
     return(
         <Container fluid className='Detailcon1'>
           <Container>
@@ -80,7 +105,8 @@ export default function Details(){
                   <h4 className='delprice'><del>Rs:<sub>{d.mrprate}/-</sub></del></h4>
                   </Col>
                   <h4 className='discountprice'>-({100-((d.rate_sell/d.mrprate)*100)})%</h4>
-                  <Button  onClick={AddToCart}>Add To Cart</Button>   
+                  <Button onClick={AddToCart}>Add To Cart</Button> 
+                  <Button onClick={ByyNow}>Byy Now</Button>  
             </Col>
             </Row>
             <Footer/>
