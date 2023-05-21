@@ -19,9 +19,9 @@ let params = {
     email:email,
     password:Password
 }
-        let res = await axios.post('register',params)
-        console.log(res.data);
-        const {message,success} =res.data
+        let res = await axios.post('register',params).catch(d=>alert(d))
+        console.log(res?.data);
+        const {message,success} =res?.data
         if(success){
             alert(message)
             nav("/login")

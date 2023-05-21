@@ -11,6 +11,8 @@ export default function Details(){
     const navigation=useNavigate()
     const loc=useLocation()
     const[d,setd]=useState(loc.state)
+
+
     async function AddToCart(){
       if(!user){
         alert('Please Login');
@@ -24,7 +26,7 @@ export default function Details(){
       }
           let res = await axios.post('addtocart',params)
           console.log(res.data);
-          const {message,success} =res.data
+          const {message,success} =res?.data
           if(success){
               alert(message)
               localStorage.setItem("user",true)
@@ -106,7 +108,7 @@ export default function Details(){
                   </Col>
                   <h4 className='discountprice'>-({100-((d.rate_sell/d.mrprate)*100)})%</h4>
                   <Button onClick={AddToCart}>Add To Cart</Button> 
-                  <Button onClick={ByyNow}>Byy Now</Button>  
+                  <Button onClick={ByyNow}>Buy Now</Button>  
             </Col>
             </Row>
             <Footer/>

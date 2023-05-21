@@ -3,18 +3,19 @@ var fs = require('fs');
 var app = express()
 app.use(express.json())
 var fs = require('fs');
-let data =[{id:1,name:"hanu"},{id:2,name:"hanu1"}]
-app.get('/getdata',function(req,res){
-    res.send(data);
-})
 
-app.post('/postdata',function(req,res){
-    res.send(req.body)
-   })
 app.post('/addtocart',function(req,res){
-    fs.appendFileSync('./data/addtocart.json', JSON.stringify(req.body),"utf8")
+  let result=  fs.appendFileSync('./data/addtocart.json', JSON.stringify(req.body),"utf8")
     fs.appendFileSync('./data/addtocart.json', "\n","utf8")
-    res.send(req.body)
+    let resultdata=""
+    if(!result){
+        resultdata={success:true,message:"data insert successfully"}
+    }
+    else{
+        resultdata={success:false,message:"data not insert successfully"}
+        
+    }
+    res.send(resultdata)
  })
  app.post('/register',function(req,res){
     let result=fs.appendFileSync('./data/userdata.json', JSON.stringify(req.body),"utf8")
